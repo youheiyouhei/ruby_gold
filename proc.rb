@@ -5,12 +5,12 @@
 # puts add_proc.call(10)
 # puts add_proc.call(10, 20)
 
-def greeting(&block)
+def greeting(arrange_proc)
   puts 'おはよう'
-  text = block.call('こんにちは')
+  text = arrange_proc.call('こんにちは')
   puts text
   puts 'こんばんは'
 end
 
 repeat_proc = proc { |text| text * 2}
-greeting(&repeat_proc)
+greeting(repeat_proc)
